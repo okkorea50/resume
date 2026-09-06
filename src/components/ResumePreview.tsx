@@ -6,8 +6,6 @@ import {
   Phone, 
   MapPin, 
   Globe, 
-  Linkedin, 
-  Github, 
   ShieldCheck, 
   Calendar, 
   Clock, 
@@ -217,40 +215,7 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data, lang }) => {
                 </div>
               )}
 
-              {/* 5. LINKS */}
-              {(personal.linkedin || personal.github || personal.portfolio) && (
-                <div className="space-y-2 pt-1 border-t border-slate-800">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
-                    Links & Portfolio
-                  </h4>
-                  <div className="space-y-1 text-xs text-slate-300">
-                    {personal.linkedin && (
-                      <div className="flex items-center space-x-1.5">
-                        <Linkedin className="w-3 h-3 text-blue-400 shrink-0" />
-                        <span className="truncate max-w-[170px] hover:underline">
-                          {personal.linkedin.replace(/^https?:\/\/(www\.)?/, "")}
-                        </span>
-                      </div>
-                    )}
-                    {personal.github && (
-                      <div className="flex items-center space-x-1.5">
-                        <Github className="w-3 h-3 text-blue-400 shrink-0" />
-                        <span className="truncate max-w-[170px] hover:underline">
-                          {personal.github.replace(/^https?:\/\/(www\.)?/, "")}
-                        </span>
-                      </div>
-                    )}
-                    {personal.portfolio && (
-                      <div className="flex items-center space-x-1.5">
-                        <Globe className="w-3 h-3 text-blue-400 shrink-0" />
-                        <span className="truncate max-w-[170px] hover:underline">
-                          {personal.portfolio.replace(/^https?:\/\/(www\.)?/, "")}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              )}
+
             </div>
 
             {/* Bottom watermark / standard note */}

@@ -9,9 +9,6 @@ export interface PersonalInfo {
   gender: string;
   nationality: string;
   currentAddress: string;
-  linkedin: string;
-  github: string;
-  portfolio: string;
 }
 
 export type VisaCategory =

@@ -196,44 +196,7 @@ export const PersonalSection: React.FC<PersonalSectionProps> = ({
           </select>
         </div>
 
-        <div className="sm:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-2 pt-2">
-          <div>
-            <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-              {t.linkedin}
-            </label>
-            <input
-              type="text"
-              value={personal.linkedin}
-              onChange={(e) => onChange("linkedin", e.target.value)}
-              placeholder="https://linkedin.com/in/..."
-              className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
-          <div>
-            <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-              {t.github}
-            </label>
-            <input
-              type="text"
-              value={personal.github}
-              onChange={(e) => onChange("github", e.target.value)}
-              placeholder="https://github.com/..."
-              className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
-          <div>
-            <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-              {t.portfolio}
-            </label>
-            <input
-              type="text"
-              value={personal.portfolio}
-              onChange={(e) => onChange("portfolio", e.target.value)}
-              placeholder="https://alex-portfolio.dev"
-              className="w-full px-2.5 py-1.5 text-xs border border-slate-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
-          </div>
-        </div>
+
       </div>
     </div>
   );

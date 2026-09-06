@@ -12,9 +12,6 @@ export const sampleResume: ResumeData = {
     gender: "Male",
     nationality: "Canada",
     currentAddress: "Mapo-gu, Seoul, Republic of Korea",
-    linkedin: "https://linkedin.com/in/alex-tremblay-kr",
-    github: "https://github.com/alex-tremblay-dev",
-    portfolio: "https://alex-portfolio.dev",
   },
   visa: {
     visaType: "E-7-1 (Special Activity / Professional)",
@@ -140,9 +137,6 @@ export const emptyResume: ResumeData = {
     gender: "",
     nationality: "",
     currentAddress: "",
-    linkedin: "",
-    github: "",
-    portfolio: "",
   },
   visa: {
     visaType: "E-7",

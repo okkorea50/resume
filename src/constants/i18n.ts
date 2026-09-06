@@ -36,9 +36,6 @@ export const translations = {
     gender: "성별",
     nationality: "국적",
     currentAddress: "현재 체류지 / 거주 국가 및 도시",
-    linkedin: "LinkedIn 프로필 URL",
-    github: "GitHub URL",
-    portfolio: "포트폴리오 / 개인 웹사이트",
 
     // Visa Fields
     visaType: "현재 체류 자격 / 비자 종류",
@@ -124,9 +121,6 @@ export const translations = {
     gender: "Gender",
     nationality: "Nationality",
     currentAddress: "Current Residence (City, Country)",
-    linkedin: "LinkedIn Profile URL",
-    github: "GitHub Profile URL",
-    portfolio: "Portfolio / Website URL",
 
     // Visa Fields
     visaType: "Current Visa Status",
