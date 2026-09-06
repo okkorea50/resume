@@ -59,7 +59,7 @@ git commit -m "feat: initial commit for global talent resume webapp"
 git branch -M main
 
 # 4. 본인 깃허브 resume 저장소 연결 (본인의 GitHub 유저네임으로 변경)
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/resume.git
+git remote add origin https://github.com/okkorea50/resume.git
 
 # 5. GitHub에 푸시
 git push -u origin main
