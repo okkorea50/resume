@@ -21,7 +21,24 @@ export default function Home() {
     try {
       const saved = localStorage.getItem("foreign_talent_resume_v1");
       if (saved) {
-        setData(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        setData({
+          ...sampleResume,
+          ...parsed,
+          personal: {
+            ...sampleResume.personal,
+            ...(parsed.personal || {}),
+          },
+          visa: {
+            ...sampleResume.visa,
+            ...(parsed.visa || {}),
+          },
+          languages: parsed.languages || sampleResume.languages,
+          experiences: parsed.experiences || sampleResume.experiences,
+          education: parsed.education || sampleResume.education,
+          skills: parsed.skills || sampleResume.skills,
+          certifications: parsed.certifications || sampleResume.certifications,
+        });
       }
       const savedLang = localStorage.getItem("foreign_talent_resume_lang") as Language;
       if (savedLang) {
