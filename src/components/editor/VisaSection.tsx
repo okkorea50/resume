@@ -25,6 +25,7 @@ export const VisaSection: React.FC<VisaSectionProps> = ({ visa, onChange, lang }
               value={
                 [
                   "E-7-1 (Special Activity / Professional)",
+                  "E-9 (Non-professional Employment)",
                   "D-10 (Job Seeker)",
                   "F-2 (Resident)",
                   "F-4 (Overseas Korean)",
@@ -45,6 +46,7 @@ export const VisaSection: React.FC<VisaSectionProps> = ({ visa, onChange, lang }
               className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
             >
               <option value="E-7-1 (Special Activity / Professional)">E-7 (전문인력 / 특정활동)</option>
+              <option value="E-9 (Non-professional Employment)">E-9 (비숙련직 / 비전문취업)</option>
               <option value="D-10 (Job Seeker)">D-10 (구직비자)</option>
               <option value="F-2 (Resident)">F-2 (거주비자)</option>
               <option value="F-4 (Overseas Korean)">F-4 (재외동포)</option>
