@@ -19,7 +19,7 @@ export default function Home() {
   // Load from local storage on mount
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("foreign_talent_resume_v1");
+      const saved = localStorage.getItem("foreign_talent_resume_v2");
       if (saved) {
         const parsed = JSON.parse(saved);
         setData({
@@ -55,7 +55,7 @@ export default function Home() {
   useEffect(() => {
     if (!isLoaded) return;
     try {
-      localStorage.setItem("foreign_talent_resume_v1", JSON.stringify(data));
+      localStorage.setItem("foreign_talent_resume_v2", JSON.stringify(data));
       setLastSaved(true);
       const timer = setTimeout(() => setLastSaved(false), 2000);
       return () => clearTimeout(timer);
