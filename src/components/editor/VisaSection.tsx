@@ -1,20 +1,63 @@
 "use client";
 
 import React from "react";
-import { VisaInfo } from "../../types/resume";
+import { VisaInfo, PersonalInfo } from "../../types/resume";
 import { Language, translations } from "../../constants/i18n";
+import { Ruler } from "lucide-react";
 
 interface VisaSectionProps {
   visa: VisaInfo;
+  personal?: PersonalInfo;
   onChange: (field: keyof VisaInfo, value: any) => void;
+  onPersonalChange?: (field: keyof PersonalInfo, value: any) => void;
   lang: Language;
 }
 
-export const VisaSection: React.FC<VisaSectionProps> = ({ visa, onChange, lang }) => {
+export const VisaSection: React.FC<VisaSectionProps> = ({
+  visa,
+  personal,
+  onChange,
+  onPersonalChange,
+  lang,
+}) => {
   const t = translations[lang];
 
   return (
     <div className="p-5 space-y-4">
+      {/* Physical Info (Height & Weight) - Placed above Visa Info */}
+      <div className="p-3.5 bg-blue-50/60 rounded-xl border border-blue-100/80 space-y-2">
+        <div className="flex items-center space-x-1.5 text-xs font-bold text-blue-900">
+          <Ruler className="w-4 h-4 text-blue-600" />
+          <span>{t.physicalInfo}</span>
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              {t.height}
+            </label>
+            <input
+              type="text"
+              value={personal?.height || ""}
+              onChange={(e) => onPersonalChange?.("height", e.target.value)}
+              placeholder="e.g. 178 cm / 5'10&quot;"
+              className="w-full px-3 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1">
+              {t.weight}
+            </label>
+            <input
+              type="text"
+              value={personal?.weight || ""}
+              onChange={(e) => onPersonalChange?.("weight", e.target.value)}
+              placeholder="e.g. 72 kg / 158 lbs"
+              className="w-full px-3 py-1.5 text-xs bg-white border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            />
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
         <div>
           <label className="block text-xs font-semibold text-slate-700 mb-1">

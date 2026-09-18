@@ -98,10 +98,17 @@ export const EditorForm: React.FC<EditorFormProps> = ({ data, onChange, lang }) 
         {openSections.visa && (
           <VisaSection
             visa={data.visa}
+            personal={data.personal}
             onChange={(field, val) =>
               onChange({
                 ...data,
                 visa: { ...data.visa, [field]: val },
+              })
+            }
+            onPersonalChange={(field, val) =>
+              onChange({
+                ...data,
+                personal: { ...data.personal, [field]: val },
               })
             }
             lang={lang}

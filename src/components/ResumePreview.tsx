@@ -15,7 +15,8 @@ import {
   Award, 
   CheckCircle,
   AlertCircle,
-  Building2
+  Building2,
+  Ruler
 } from "lucide-react";
 import { ResumeData } from "../types/resume";
 import { Language } from "../constants/i18n";
@@ -164,6 +165,16 @@ export const ResumePreview: React.FC<ResumePreviewProps> = ({ data, lang }) => {
                     <div className="flex items-center space-x-2">
                       <Calendar className="w-3.5 h-3.5 text-blue-400 shrink-0" />
                       <span>DOB: {personal.dateOfBirth} {personal.gender ? `(${personal.gender})` : ""}</span>
+                    </div>
+                  )}
+                  {(personal.height || personal.weight) && (
+                    <div className="flex items-center space-x-2">
+                      <Ruler className="w-3.5 h-3.5 text-blue-400 shrink-0" />
+                      <span>
+                        {personal.height ? `H: ${personal.height}` : ""}
+                        {personal.height && personal.weight ? " / " : ""}
+                        {personal.weight ? `W: ${personal.weight}` : ""}
+                      </span>
                     </div>
                   )}
                 </div>

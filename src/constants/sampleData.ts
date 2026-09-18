@@ -12,6 +12,8 @@ export const sampleResume: ResumeData = {
     gender: "Male",
     nationality: "Canada",
     currentAddress: "Mapo-gu, Seoul, Republic of Korea",
+    height: "178 cm",
+    weight: "72 kg",
   },
   visa: {
     visaType: "E-7-1 (Special Activity / Professional)",
@@ -137,6 +139,8 @@ export const emptyResume: ResumeData = {
     gender: "",
     nationality: "",
     currentAddress: "",
+    height: "",
+    weight: "",
   },
   visa: {
     visaType: "E-7",

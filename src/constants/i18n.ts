@@ -36,6 +36,9 @@ export const translations = {
     gender: "성별",
     nationality: "국적",
     currentAddress: "현재 체류지 / 거주 국가 및 도시",
+    height: "키 (Height)",
+    weight: "몸무게 (Weight)",
+    physicalInfo: "신체 정보 (키 & 몸무게)",
 
     // Visa Fields
     visaType: "현재 체류 자격 / 비자 종류",
@@ -121,6 +124,9 @@ export const translations = {
     gender: "Gender",
     nationality: "Nationality",
     currentAddress: "Current Residence (City, Country)",
+    height: "Height (cm / ft)",
+    weight: "Weight (kg / lbs)",
+    physicalInfo: "Physical Details (Height & Weight)",
 
     // Visa Fields
     visaType: "Current Visa Status",

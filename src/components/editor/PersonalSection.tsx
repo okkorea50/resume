@@ -196,7 +196,31 @@ export const PersonalSection: React.FC<PersonalSectionProps> = ({
           </select>
         </div>
 
+        <div>
+          <label className="block text-xs font-semibold text-slate-700 mb-1">
+            {t.height}
+          </label>
+          <input
+            type="text"
+            value={personal.height || ""}
+            onChange={(e) => onChange("height", e.target.value)}
+            placeholder="e.g. 178 cm / 5'10&quot;"
+            className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
 
+        <div>
+          <label className="block text-xs font-semibold text-slate-700 mb-1">
+            {t.weight}
+          </label>
+          <input
+            type="text"
+            value={personal.weight || ""}
+            onChange={(e) => onChange("weight", e.target.value)}
+            placeholder="e.g. 72 kg / 158 lbs"
+            className="w-full px-3 py-2 text-sm border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,8 @@ export interface PersonalInfo {
   gender: string;
   nationality: string;
   currentAddress: string;
+  height?: string;
+  weight?: string;
 }
 
 export type VisaCategory =
